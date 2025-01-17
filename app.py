@@ -123,7 +123,7 @@ else:
 
 # Generate Grad-CAM heatmap
 heatmap = generate_gradcam_heatmap(model, img_array, last_conv_layer_name)
-
+heatmap = 1- heatmap
 # Overlay the heatmap on the original image
 heatmap_overlay = overlay_gradcam_on_image(np.array(image), heatmap)
 
